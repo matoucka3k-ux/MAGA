@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Make Africa Great Again — Premium Essentials. T-shirts et casquettes premium inspirés du continent africain.">
+<meta property="og:title" content="MAKE AFRICA GREAT AGAIN">
+<meta property="og:description" content="Premium Essentials — Collection 01">
+<meta property="og:image" content="/images/tee-front.jpg">
+<title>MAKE AFRICA GREAT AGAIN — Premium Essentials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <span class="nav-logo-top">MAKE</span>
+    <span class="nav-logo-main">AFRICA</span>
+    <span class="nav-logo-bottom">GREAT AGAIN</span>
+  </div>
+  <a href="#products" class="nav-shop">Shop</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-africa-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-label="Continent africain">
+    <path fill="#c8e8a0" d="M 158.1,33.8 L 128.1,45.0 L 94.4,90.0 L 79.4,135.0 L 79.4,161.2 L 94.4,191.2 L 120.6,213.8 L 184.4,210.0 L 210.6,221.2 L 214.4,262.5 L 225.6,270.0 L 221.9,273.8 L 229.4,288.8 L 229.4,322.5 L 221.9,348.8 L 248.1,423.8 L 248.1,446.2 L 259.4,450.0 L 304.4,431.2 L 341.9,382.5 L 345.6,356.2 L 371.9,326.2 L 368.1,277.5 L 405.6,228.8 L 420.6,198.8 L 420.6,180.0 L 394.4,180.0 L 379.4,165.0 L 345.6,97.5 L 319.4,63.8 L 293.1,63.8 L 274.4,56.2 L 248.1,60.0 L 199.4,30.0 Z"/>
+  </svg>
+  <p class="hero-make">MAKE</p>
+  <h1 class="hero-africa">AFRICA</h1>
+  <p class="hero-great">GREAT AGAIN</p>
+  <a href="#products" class="hero-scroll" aria-label="Voir la collection">↓ &nbsp; Collection</a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <p class="section-eyebrow">Collection 01 — Drop 2025</p>
+  <div class="products-grid">
+
+    <!-- TEE -->
+    <article class="product-card" data-product="tee">
+      <div class="product-img-wrap">
+        <img
+          class="product-img"
+          id="tee-img"
+          src="/images/tee-front.jpg"
+          alt="Single Jersey Tee Make Africa Great Again — Vert Forêt"
+          loading="lazy"
+        />
+        <div class="product-dots" role="tablist" aria-label="Vues du tee-shirt">
+          <button class="dot active" onclick="sw('tee','front',this)" aria-label="Vue avant" role="tab" aria-selected="true"></button>
+          <button class="dot" onclick="sw('tee','back',this)" aria-label="Vue arrière" role="tab" aria-selected="false"></button>
+        </div>
+      </div>
+      <p class="product-name">Single Jersey Tee</p>
+      <div class="product-meta">
+        <span class="product-ref">Vert Forêt · MAGA-001</span>
+        <span class="product-price">39 €</span>
+      </div>
+      <button class="btn-add" onclick="addToCart('Single Jersey Tee', 39)">Ajouter au panier</button>
+    </article>
+
+    <!-- CAP -->
+    <article class="product-card" data-product="cap">
+      <div class="product-img-wrap">
+        <img
+          class="product-img"
+          id="cap-img"
+          src="/images/cap-front.jpg"
+          alt="Vintage Corduroy Cap Make Africa Great Again — Rouge Brique"
+          loading="lazy"
+        />
+        <div class="product-dots" role="tablist" aria-label="Vues de la casquette">
+          <button class="dot active" onclick="sw('cap','front',this)" aria-label="Vue avant" role="tab" aria-selected="true"></button>
+          <button class="dot" onclick="sw('cap','back',this)" aria-label="Vue arrière" role="tab" aria-selected="false"></button>
+        </div>
+      </div>
+      <p class="product-name">Vintage Corduroy Cap</p>
+      <div class="product-meta">
+        <span class="product-ref">Rouge Brique · MAGA-002</span>
+        <span class="product-price">29 €</span>
+      </div>
+      <button class="btn-add" onclick="addToCart('Vintage Corduroy Cap', 29)">Ajouter au panier</button>
+    </article>
+
+  </div>
+</section>
+
+<!-- CART TOAST -->
+<div id="cart-toast" class="cart-toast" aria-live="polite"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo-block">
+    <span class="footer-logo-top">MAKE</span>
+    <span class="footer-logo-main">AFRICA</span>
+    <span class="footer-logo-bottom">GREAT AGAIN</span>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:contact@makeafricagreatagain.com">Contact</a>
+    <a href="#">Livraison</a>
+    <a href="#">Mentions légales</a>
+  </div>
+  <span class="footer-copy">© 2025 · Premium Essentials</span>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

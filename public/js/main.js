@@ -1,0 +1,65 @@
+// NAV scroll state
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// Product image switcher
+const productImages = {
+  tee: { front: '/images/tee-front.jpg', back: '/images/tee-back.jpg' },
+  cap: { front: '/images/cap-front.jpg', back: '/images/cap-back.jpg' }
+};
+
+function sw(product, side, dot) {
+  const img = document.getElementById(product + '-img');
+  if (!img) return;
+
+  img.style.opacity = '0';
+  img.style.transition = 'opacity 0.25s ease';
+
+  setTimeout(() => {
+    img.src = productImages[product][side];
+    img.onload = () => {
+      img.style.opacity = '1';
+    };
+  }, 150);
+
+  const dots = dot.closest('.product-dots').querySelectorAll('.dot');
+  dots.forEach(d => {
+    d.classList.remove('active');
+    d.setAttribute('aria-selected', 'false');
+  });
+  dot.classList.add('active');
+  dot.setAttribute('aria-selected', 'true');
+}
+
+// Cart toast
+let toastTimer;
+function addToCart(name, price) {
+  const toast = document.getElementById('cart-toast');
+  if (!toast) return;
+
+  clearTimeout(toastTimer);
+  toast.textContent = `${name} — ${price} € ajouté`;
+  toast.classList.add('show');
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2800);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.product-card, .section-eyebrow').forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = `${i * 0.12}s`;
+  observer.observe(el);
+});

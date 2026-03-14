@@ -1,0 +1,11 @@
+{
+  "name": "make-africa-great-again",
+  "version": "1.0.0",
+  "description": "Make Africa Great Again — Premium Essentials",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site — no build step'",
+    "start": "npx serve public"
+  }
+}
